@@ -1,7 +1,7 @@
 === Display Time(zone) ===
 Contributors: midhund
 Tags: admin, timezone
-Tested up to: 2.8.4
+Tested up to: 3.0.1
 Stable tag: trunk
 
 Simple plug-in to display current time with timezone in the upper right of your admin screen on every page. 
