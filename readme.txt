@@ -4,11 +4,11 @@ Tags: admin, timezone
 Tested up to: 3.0.1
 Stable tag: trunk
 
-Simple plug-in to display current time with timezone in the upper right of your admin screen on every page. 
+Display Timezone is simple plug-in to display current time with timezone in the upper right of your admin screen on every page. 
 
 == Description ==
 
-Simple plug-in to display current time with timezone in the upper right of your admin screen on every page. It takes the values from the option Timezone, Date Format, Time Format and starts the clock. There is no configuration page.
+Display Timezone simple plug-in to display current time with timezone in the upper right of your admin screen on every page. It takes the values from the option Timezone, Date Format, Time Format and starts the clock. There is no configuration page.
 
 
 == Installation ==
