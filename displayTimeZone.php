@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: Display Time(zone)
-Plugin URI: http://tutorboy.com
+Plugin URI: http://apps.tutorboy.com/display-timezone/
 Description: Simple plug-in to display current time with timezone in the upper right of your admin screen on every page. It takes the values from the option Timezone, Date Format, Time Format and starts the clock.
 Author: Midhun Devasia
-Version: 1.0.0
+Version: 1.0.1
 Author URI: http://tutorboy.com
 License: GPLv2
 
