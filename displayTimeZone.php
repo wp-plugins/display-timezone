@@ -44,7 +44,7 @@ function tboy_getTimezone() {
 		cd.setYear(".date('Y', $date).");
 		cd.setMonth((".date('m', $date)."-1));
 		cd.setDate(".date('d', $date).");
-		cd.setHours(".date('h', $date).");
+		cd.setHours(".date('H', $date).");
 		cd.setMinutes(".date('i', $date).");
 		sec = ".date('s', $date).";
 		cd.setSeconds(sec);
@@ -66,7 +66,6 @@ function tboy_getTimezone() {
 		
 	echo $jscript ;
 }
-
 // We need some CSS to position the paragraph
 function tboy_displayTimezone_css() {
 	// This makes sure that the posinioning is also good for right-to-left languages
