@@ -2,7 +2,7 @@
 Contributors: midhund
 Tags: admin, timezone
 Tested up to: 3.0.1
-Stable tag: trunk
+Stable tag: 1.0.1
 
 [Display Timezone](http://apps.tutorboy.com/display-timezone/) is simple plug-in to display current time with timezone in the upper right of your admin screen on every page. 
 
