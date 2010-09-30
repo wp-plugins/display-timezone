@@ -8,7 +8,10 @@ Display Timezone is simple plug-in to display current time with timezone in the 
 
 == Description ==
 
-[Display Timezone](http://apps.tutorboy.com/display-timezone/) is simple plug-in to display current time with timezone in the upper right of your admin screen on every page. It takes the values from the option Timezone, Date Format, Time Format and starts the clock. There is no configuration page.
+[Display Timezone](http://apps.tutorboy.com/display-timezone/) is simple plug-in to display current time with timezone in the upper right of your admin screen on every page. It takes the values from the option Timezone, Date Format, Time Format and starts the clock. There is no configuration page. 
+
+= When you going to use =
+If your wordpress site is hosted at London and you are from China, both time are diffrent. You get confused while schedule the post and other events related to time. If you look at your machine its shows your time, not the server time. Here you can use the plugin. ie The Plugin Shows your server time, not the machine time or browser time.
 
 
 == Installation ==
