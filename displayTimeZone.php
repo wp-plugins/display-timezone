@@ -3,12 +3,12 @@
 Plugin Name: Display Time(zone)
 Plugin URI: http://apps.tutorboy.com/display-timezone/
 Description: Simple plug-in to display current time with timezone in the upper right of your admin screen on every page. It takes the values from the option Timezone, Date Format, Time Format and starts the clock.
-Author: Midhun Devasia,kavitharmenon
+Author: Midhun Devasia, kavitharmenon
 Version: 1.0.3
-Author URI: http://tutorboy.com
+Author URI: http://midhundevasia.com
 License: GPLv2
 
-	Copyright 2010  Midhun Devasia  (email : midhun@tutorboy.com)
+	Copyright 2010  Midhun Devasia  (emails : mail@midhundevasia.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -72,20 +72,19 @@ function tboy_getTimezone() {
 function tboy_displayTimezone_css() {
 	GLOBAL $wp_v;
 	// This makes sure that the posinioning is also good for right-to-left languages
-	$dir1 = WP_PLUGIN_URL.'/display-timezone';
+	$plugin_dir = WP_PLUGIN_URL.'/display-timezone';
 	$x = ( is_rtl() ) ? 'left' : 'right';
-	$top_pos = (version_compare($wp_v, '3.2', '>='))?'top:0.8em':'top:4.5em';
+	$top_pos = (version_compare($wp_v, '3.2', '>=')) ? '0.8em' : '4.5em';
 	echo "
 	<style type='text/css'>
 	#tboy_displayTimezone {
 		position: absolute;
-		$top_pos;
+		top: $top_pos;
 		margin: 0;
 		padding-left: 20px;
 		$x: 215px;
 		font-size: 11px;
-		background-image: url({$dir1}/clock.png);
-      	background-repeat: no-repeat;
+		background-image: url({$plugin_dir}/clock.png) no-repeat;
 	}
 	</style>
 	";

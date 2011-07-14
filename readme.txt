@@ -1,7 +1,7 @@
 === Display Time(zone) ===
-Contributors: midhund,kavitharmenon
+Contributors: midhund, kavitharmenon
 Tags: admin, timezone
-Tested up to: 3.0.1
+Tested up to: 3.2.1
 Stable tag: 1.0.3
 
 Display Timezone is simple plug-in to display current time with timezone in the upper right of your admin screen on every page. 
@@ -36,6 +36,7 @@ Installation is simple and should not take you more than 1 minutes.
 * Fixed the `am & pm` bug.
 = 1.0.2 =
 * Edit in readme.txt
-=1.0.3=
-*Changed the position of display to compatibility for the versions `WordPress 3.2` or greater,also compactable in all other version 
+= 1.0.3 =
+* Added Clock Icon
+* Changed the position of display to compatibility for the versions `WordPress 3.2` or greater, also compactable in all other version 
 
