@@ -3,8 +3,8 @@
 Plugin Name: Display Time(zone)
 Plugin URI: http://apps.tutorboy.com/display-timezone/
 Description: Simple plug-in to display current time with timezone in the upper right of your admin screen on every page. It takes the values from the option Timezone, Date Format, Time Format and starts the clock.
-Author: Midhun Devasia
-Version: 1.0.2
+Author: Midhun Devasia& thandamma
+Version: 1.0.3
 Author URI: http://tutorboy.com
 License: GPLv2
 
@@ -29,6 +29,8 @@ License: GPLv2
 
 
 // This just echoes the current time according to the timezone set from the WordPress date settings.
+$wp_v = $wp_version;
+
 function tboy_getTimezone() {
 	date_default_timezone_set(get_option('timezone_string'));
 	$date = strtotime(date(get_option('date_format') . " " . get_option('time_format'))); 
@@ -61,29 +63,35 @@ function tboy_getTimezone() {
 	echo "<p id='tboy_displayTimezone'>
 		<b><span id=\"tboy_displayTimezoneSpan\">" . 
 		date(get_option('date_format') . " " . 
-		get_option('time_format')) . "</span></b> 
-		(" . date_default_timezone_get() .")</p>";
+		get_option('time_format')) . "</span></b>
+		(" . date_default_timezone_get() .")</p> ";
 		
 	echo $jscript ;
 }
 // We need some CSS to position the paragraph
 function tboy_displayTimezone_css() {
+	GLOBAL $wp_v;
 	// This makes sure that the posinioning is also good for right-to-left languages
+	$dir1 = WP_PLUGIN_URL.'/display-timezone';
 	$x = ( is_rtl() ) ? 'left' : 'right';
+	$top_pos = (version_compare($wp_v, '3.2', '>='))?'top:0.8em':'top:4.5em';
 	echo "
 	<style type='text/css'>
 	#tboy_displayTimezone {
 		position: absolute;
-		top: 4.5em;
+		$top_pos;
 		margin: 0;
-		padding: 0;
+		padding-left: 20px;
 		$x: 215px;
 		font-size: 11px;
+		background-image: url({$dir1}/clock.png);
+      	background-repeat: no-repeat;
 	}
 	</style>
 	";
 }
 
+   
 function tboy_getTimezone_script_css(){
 	define(WPDTZ_URL, WP_PLUGIN_URL.'/display-timezone/');
 	wp_register_script('tboy_getTimezone_script', WPDTZ_URL. 'js/Date.format.js');
@@ -91,7 +99,6 @@ function tboy_getTimezone_script_css(){
 	wp_enqueue_script('tboy_getTimezone_script');
  
 }
-
 add_action('init', 'tboy_getTimezone_script_css');
 add_action('admin_head', 'tboy_displayTimezone_css');
 // Now we set that function up to execute when the admin_footer action is called
