@@ -1,5 +1,5 @@
 === Display Time(zone) ===
-Contributors: midhund
+Contributors: midhund,kavitharmenon
 Tags: admin, timezone
 Tested up to: 3.0.1
 Stable tag: 1.0.3
